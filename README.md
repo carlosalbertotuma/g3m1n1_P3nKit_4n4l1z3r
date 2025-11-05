@@ -34,9 +34,9 @@ Conjunto de scripts para análise automatizada de saídas de ferramentas de pent
 
 * `g3m1n1-4n4l1z3r.sh` — coleta saída do `nmap`, constrói um prompt e envia para `gemini-cli` (várias estratégias: `--prompt-file`, `-p`, stdin). Gera um relatório bruto com a análise do modelo.
 
-* `g3m1n1-4n4l1z3r-v2-safer.sh` — lê o relatório gerado pelo Gemini, extrai comandos sugeridos, filtra ruído (headers/strings soltas), aplica políticas de segurança (whitelist, timeout, auto-attach de alvo opcional) e executa os comandos permitidos salvando logs.
+* `g3m1n1-P3nKit.sh` — lê o relatório gerado pelo Gemini, extrai comandos sugeridos, filtra ruído (headers/strings soltas), aplica políticas de segurança (whitelist, timeout, auto-attach de alvo opcional) e executa os comandos permitidos salvando logs.
 
-* `g3m1n1-runner.sh` (opcional) — versão alternativa/mais simples para extrair e executar comandos; ver histórico do repositório para variantes.
+
 
 ---
 
@@ -65,7 +65,7 @@ cd <repo-dir>
 2. Dê permissão de execução:
 
 ```bash
-chmod +x g3m1n1-4n4l1z3r.sh g3m1n1-4n4l1z3r-v2-safer.sh g3m1n1-runner.sh
+chmod +x g3m1n1-4n4l1z3r.sh g3m1n1-P3nKit.sh
 ```
 
 3. (Opcional) Instale dependências via package manager:
@@ -92,10 +92,10 @@ O script tentará `--prompt-file`, `-p` e stdin, e fará chunking automático pa
 
 ```bash
 # Dry-run (lista comandos detectados)
-./g3m1n1-4n4l1z3r-v2-safer.sh -f gemini_response.txt
+.g3m1n1-P3nKit.sh -f gemini_response.txt
 
 # Executar comandos permitidos (ex.: curl, nikto, nmap)
-./g3m1n1-4n4l1z3r-v2-safer.sh -f gemini_response.txt --run --allow "curl,nikto,nmap" --timeout 60
+./g3m1n1-P3nKit.sh -f gemini_response.txt --run --allow "curl,nikto,nmap" --timeout 60
 ```
 
 #### Opções úteis
