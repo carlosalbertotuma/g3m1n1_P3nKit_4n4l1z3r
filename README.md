@@ -150,8 +150,11 @@ Um pipeline simples pode:
 
 ## License
 
+Esse projeto está sob é de livre uso e modificação, favor manter os créditos em comentário.
+
+Ps. não utilize para crimes ciberneticos, não tenho responsábilidade do mau uso da ferramenta.
 
 ---
 
-
-Qual desses deseja que eu faça a seguir?
+## Desenvolvedor
+By Carlos Tuma - bl4dsc4n
