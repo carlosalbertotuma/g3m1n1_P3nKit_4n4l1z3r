@@ -11,6 +11,22 @@ Conjunto de scripts para análise automatizada de saídas de ferramentas de pent
 
 <img width="692" height="354" alt="image" src="https://github.com/user-attachments/assets/6cb8d883-01fa-4b01-a01a-f6c280809e1f" />
 
+---
+
+<img width="632" height="111" alt="image" src="https://github.com/user-attachments/assets/ef506485-fec9-4b39-9864-763b17842342" />
+
+---
+
+<img width="1062" height="1447" alt="image" src="https://github.com/user-attachments/assets/61f8bf12-bba4-4448-966f-eea27457d776" />
+
+---
+
+<img width="763" height="653" alt="image" src="https://github.com/user-attachments/assets/4bb69591-7c70-4f83-a005-740df2f5bae5" />
+
+---
+
+<img width="312" height="82" alt="image" src="https://github.com/user-attachments/assets/a235030d-54d1-4f87-8bd2-51f497b00095" />
+
 
 ---
 
