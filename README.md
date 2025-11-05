@@ -1,6 +1,31 @@
 # g3m1n1-toolkit
 
-Conjunto de scripts para análise automatizada de saídas de ferramentas de pentest (ex.: `nmap`) usando o Gemini CLI e para executar comandos sugeridos de forma segura.
+Conjunto de scripts focados em automatizar a análise de saídas de ferramentas de pentest (por exemplo nmap) usando o gemini-cli e executar, de forma controlada, comandos sugeridos pela análise. O objetivo é acelerar a triagem inicial — identificando serviços, riscos e verificações recomendadas — mantendo regras de segurança (whitelist, timeout, execução isolada opcional) para evitar ações perigosas acidentais.
+
+- Principais componentes
+
+- g3m1n1-4n4l1z3r.sh — orquestrador da etapa de coleta e análise:
+
+Executa nmap (quando usado com -t) ou consome uma saída de nmap já existente.
+
+Monta um prompt estruturado (instruções de análise e contexto) e envia para o gemini-cli usando múltiplas estratégias (--prompt-file, -p, stdin) para maximizar compatibilidade com diferentes versões do cliente.
+
+Implementa chunking automático para prompts muito grandes e grava a resposta bruta do modelo em arquivo.
+
+Ideal para: obter um relatório de análise em linguagem natural que resume serviços/versões, destaca portas críticas, sugere comandos de verificação e indica possíveis mitigations.
+
+- g3m1n1-P3nKit.sh — extractor e executor controlado de comandos sugeridos:
+
+Lê o relatório gerado pelo Gemini e extrai apenas linhas que parecem comandos válidos (blocos de código, inline 
+code, linhas com flags -, com URLs/IPs/domínios ou redirecionamentos/pipes).
+
+Aplica filtros para remover ruído (headers HTTP, descrições, palavras soltas) e evita executar tokens avulsos como curl sem alvo.
+
+Fornece uma whitelist por prefixo (configurável) e usa timeout para cada execução, salvando stdout, stderr e metadados por comando.
+
+Possui modo opcional de auto-attach que, com cautela, anexa o primeiro IP/URL detectado ao comando quando este vem incompleto (auditável por log).
+
+Ideal para: revisar automaticamente as ações recomendadas pelo modelo e executá-las de forma segura, com logs claros para auditoria.
 
 > **Aviso legal / ética**: Use apenas em alvos que você possui ou tem autorização explícita para testar. O autor e este repositório não se responsabilizam por uso indevido.
 ---
