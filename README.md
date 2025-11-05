@@ -158,3 +158,4 @@ Ps. não utilize para crimes ciberneticos, não tenho responsábilidade do mau u
 
 ## Desenvolvedor
 By Carlos Tuma - bl4dsc4n
+---
