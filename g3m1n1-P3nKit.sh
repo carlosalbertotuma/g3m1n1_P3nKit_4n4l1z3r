@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-# g3m1n1-4n4l1z3r-v2-safer.sh
-# Versão mais segura/robusta: filtra ruído, anexa IP/URL quando apropriado e evita executar tokens isolados.
-set -euo pipefail
 
 FILE=""
 DO_RUN=0
