@@ -55,6 +55,23 @@ Ideal para: revisar automaticamente as ações recomendadas pelo modelo e execut
 
 ---
 
+<img width="934" height="1095" alt="image" src="https://github.com/user-attachments/assets/1c81f531-61c6-4e82-8c97-54aa004793e8" />
+
+
+---
+
+
+<img width="1071" height="1609" alt="image" src="https://github.com/user-attachments/assets/1edb59b1-e987-4be5-a2cd-5831341d260c" />
+
+
+---
+
+<img width="622" height="115" alt="image" src="https://github.com/user-attachments/assets/7a86df20-7dae-45df-8503-d099df261fde" />
+
+
+---
+
+
 ## Conteúdo
 
 * `g3m1n1-4n4l1z3r.sh` — coleta saída do `nmap`, constrói um prompt e envia para `gemini-cli` (várias estratégias: `--prompt-file`, `-p`, stdin). Gera um relatório bruto com a análise do modelo.
